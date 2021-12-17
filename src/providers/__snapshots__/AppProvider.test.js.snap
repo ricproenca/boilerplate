@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppProvider Testing rendering It matches snapshot 1`] = `
+<DocumentFragment>
+  <div />
+   
+</DocumentFragment>
+`;
