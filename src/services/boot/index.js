@@ -1,1 +1,0 @@
-export { startAppEnvironment } from './appEntry';

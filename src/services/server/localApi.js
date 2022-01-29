@@ -1,8 +1,6 @@
 import { Model, createServer } from 'miragejs';
 
-import accountSubscriptions from './db/account/v1.0/subscriptions';
-import accountMe from './db/account/v1.0/users/me';
-import environmentEnv from './db/environment/rest/env';
+import accountMe from './db/v1.0/users/me';
 
 export function makeServer({ environment = 'test' } = {}) {
   return createServer({
@@ -17,16 +15,8 @@ export function makeServer({ environment = 'test' } = {}) {
     },
 
     routes() {
-      this.get('/rest/env', () => {
-        return environmentEnv;
-      });
-
       this.get('/account/v1.0/users/me', () => {
         return accountMe;
-      });
-
-      this.get('/account/v1.0/subscriptions', () => {
-        return accountSubscriptions;
       });
     }
   });

@@ -1,1 +1,1 @@
-export { getContext, getToken, isLoggedIn, login, logout } from './AdalAuth';
+export const isLoggedIn = () => false;

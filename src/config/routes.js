@@ -1,1 +1,1 @@
-export const HOME_ROUTE = '/clientconnect';
+export const HOME_ROUTE = '/rik-spotify';

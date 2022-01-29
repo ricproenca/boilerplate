@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
 
 import AppProvider from '@Providers/AppProvider';
 import AppRoutes from '@Routes';
@@ -13,4 +14,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default hot(App);

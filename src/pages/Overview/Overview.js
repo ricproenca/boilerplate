@@ -1,10 +1,7 @@
 import React from 'react';
 
-import BaseTemplate from '@Templates/Base';
-
 const Overview = () => {
-  // Render
-  return <BaseTemplate></BaseTemplate>;
+  return <div>Overview Page</div>;
 };
 
 export default Overview;
