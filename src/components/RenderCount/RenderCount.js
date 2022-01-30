@@ -1,28 +1,19 @@
 import React from 'react';
 
-import useRenderCount from '../../hooks/useRenderCount';
-
-import { defaultProps, propTypes } from './RendeCount.shape';
-
-const style = {
-  position: 'fixed',
-  bottom: 0,
-  right: 0,
-  fontSize: 10,
-  backgroundColor: 'black',
-  color: 'white'
-};
+import useRenderCount from './hooks/useRenderCount';
+import { defaultProps, propTypes } from './RenderCount.shape';
+import renderCountStyles from './RenderCount.styles';
 
 const RenderCount = ({ scope }) => {
+  // eslint-disable-next-line testing-library/render-result-naming-convention
+  const style = renderCountStyles();
   const { counter } = useRenderCount();
 
   return (
-    <div style={style}>
-      <div>
-        <code>
-          {scope} has rendered {counter} time(s)
-        </code>
-      </div>
+    <div className={style.Container}>
+      <code>
+        {scope} has rendered {counter} time(s)
+      </code>
     </div>
   );
 };

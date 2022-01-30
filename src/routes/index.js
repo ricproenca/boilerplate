@@ -7,13 +7,13 @@ import { isLoggedIn } from '@Services/auth';
 import { protectedRoutes } from './protected';
 import { publicRoutes } from './public';
 
-const Landing = React.lazy(() => import('@Pages/Landing'));
+const Home = React.lazy(() => import('@Pages/Home'));
 
 const AppRoutes = () => {
   const commonRoutes = [
     {
       path: HOME_ROUTE,
-      element: <Landing />
+      element: <Home />
     },
     {
       path: '/',
