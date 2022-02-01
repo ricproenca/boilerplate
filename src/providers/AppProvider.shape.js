@@ -6,5 +6,8 @@ export const defaultProps = {
 };
 
 export const propTypes = {
+  /**
+   * Consumer components
+   */
   children: node.isRequired
 };

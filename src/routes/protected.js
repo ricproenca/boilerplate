@@ -5,6 +5,9 @@ import { HOME_ROUTE } from '@Config/routes';
 
 const Dashboard = React.lazy(() => import('@Pages/Dashboard'));
 
+/**
+ * Definition of the routes that require authentication
+ */
 const protectedRoutes = [
   { name: 'Home', path: HOME_ROUTE, element: <Navigate to={`${HOME_ROUTE}/dashboard`} /> },
   { name: 'Dashboard', path: `${HOME_ROUTE}/dashboard`, element: <Dashboard /> }

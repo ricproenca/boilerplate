@@ -1,21 +1,25 @@
 import Container from '@mui/material/Container';
-import { isValidSession } from '@Services/spotify/Auth';
 import React, { Fragment } from 'react';
 import { Navigate } from 'react-router-dom';
 
 import Login from '@Components/Login/Login';
-import { loginUrl } from '@Config/spotify';
+import { loginUrl } from '@Services/spotify/config';
+import useSpotifyAuth from '@Services/spotify/hooks/useSpotifyAuth';
 
 /**
- * Check if the user has a valid session and redirect to the proper route
- * dashboard: in case of a valid session
- * login: in case of a non valid session
+ * Home Page
+ *
+ * It checks if the user has a valid session and redirect to the proper route
+ * - dashboard: in case of a valid session
+ * - login: in case of a non valid session
  */
 const HomePage = () => {
+  const { isValidSession } = useSpotifyAuth();
+
   const handleLogin = () => (window.location = loginUrl);
 
   return (
-    <Fragment>
+    <>
       {isValidSession() ? (
         <Navigate to='/dashboard' />
       ) : (
@@ -23,7 +27,7 @@ const HomePage = () => {
           <Login handleLogin={handleLogin} />
         </Container>
       )}
-    </Fragment>
+    </>
   );
 };
 

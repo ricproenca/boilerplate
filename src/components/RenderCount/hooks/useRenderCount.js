@@ -1,10 +1,16 @@
 import { useRef } from 'react';
 
-const useRenderCount = () => {
-  const count = useRef(0);
-  count.current += 1;
+/**
+ * React hook to record the render count}
+ * @param {string} scope - name to be logged (usually a component)
+ */
+const useRenderCount = (scope = '<Component />') => {
+  const counter = useRef(0);
+  counter.current += 1;
 
-  return { counter: count.current };
+  // eslint-disable-next-line no-console
+  console.log(`${scope} rendered ${counter.current} time(s).`);
+  return { counter: counter.current };
 };
 
 export default useRenderCount;

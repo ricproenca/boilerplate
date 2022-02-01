@@ -20,14 +20,17 @@ const Login = ({ handleLogin }) => {
       <Box className={classes.Box}>
         <img className={classes.Logo} src={spotifyLogo} alt='Spotify Logo' />
       </Box>
+
       <Box className={classes.Box}>
         <Button className={classes.LoginButton} display='block' onClick={handleLogin}>
           Login to Rickys spotify
         </Button>
       </Box>
+
       <Typography className={classes.Message} display='block' gutterBottom>
         Not another spotify clone...
       </Typography>
+
       <Typography className={classes.Link} display='block' gutterBottom>
         <Link
           href='https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#'

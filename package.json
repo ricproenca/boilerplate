@@ -50,6 +50,7 @@
     "react-i18next": "^11.14.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
+    "react-spotify-api": "^3.0.0",
     "spotify-web-api-js": "^1.5.2"
   },
   "devDependencies": {

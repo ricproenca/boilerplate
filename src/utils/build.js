@@ -3,6 +3,9 @@ const isDevelopmentMode = environment === 'development';
 const isProductionMode = environment === 'production';
 const isTestingMode = environment === 'test';
 
+/**
+ * Start local api database mock
+ * */
 const startLocalApi = (isDevelopmentMode || isTestingMode) && process.env.REACT_APP_LOCAL_API !== 'false';
 
 export { environment, isDevelopmentMode, isProductionMode, isTestingMode, startLocalApi };

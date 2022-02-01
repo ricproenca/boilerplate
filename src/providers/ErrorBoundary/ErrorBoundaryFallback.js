@@ -5,11 +5,17 @@ import React from 'react';
 import { defaultProps, propTypes } from './ErrorBoundaryFallback.shape';
 import ErrorBoundaryFallbackStyles from './ErrorBoundaryFallback.styles';
 
+/**
+ * Fallback UI for the Error boundary
+ *
+ * @param {object|string} error - error to show
+ * @param {Function} resetError - callback to reset the Error
+ */
 const ErrorFallback = ({ error, resetError }) => {
-  // Hooks
+  console.log(': ErrorFallback -> error', error.message);
+
   const classes = ErrorBoundaryFallbackStyles();
 
-  // Render
   const showError = error.message ? error.message : error;
 
   return (
@@ -21,6 +27,7 @@ const ErrorFallback = ({ error, resetError }) => {
       <button className={classes.button} onClick={resetError} data-testid='try-again-button'>
         Try again
       </button>
+      <pre className={classes.stack}>{error.stack}</pre>
     </Box>
   );
 };

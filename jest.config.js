@@ -32,5 +32,6 @@ module.exports = async () => ({
     '.+\\.css$': '<rootDir>/src/tests/__mocks__/cssMock.js',
     '(?!.*\\.(js|jsx|mjs|css)$)': '<rootDir>/src/tests/__mocks__/fileMock.js'
   },
+  transformIgnorePatterns: ['/node_modules/(?!react-spotify-api)'],
   verbose: true
 });

@@ -5,5 +5,8 @@ export const defaultProps = {
 };
 
 export const propTypes = {
+  /**
+   * Hold the name to be logged (usually a component name)
+   */
   scope: string
 };

@@ -1,4 +1,4 @@
-import { func, object } from 'prop-types';
+import { func, object, oneOfType, string } from 'prop-types';
 
 import { reloadPage } from '@Utils/router';
 
@@ -8,6 +8,12 @@ export const defaultProps = {
 };
 
 export const propTypes = {
-  error: object,
+  /**
+   * Error to show
+   */
+  error: oneOfType([object, string]),
+  /**
+   * callback to reset the Error
+   */
   resetError: func
 };

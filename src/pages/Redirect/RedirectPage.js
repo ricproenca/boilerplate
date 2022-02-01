@@ -2,14 +2,18 @@ import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { HOME_ROUTE } from '@Config/routes';
-import { persistAccessTokenParams } from '@Services/spotify/Auth';
+import useSpotifyAuth from '@Services/spotify/hooks/useSpotifyAuth';
 import { getParamValues } from '@Utils/router';
 /**
  * Spotify redirect page
+ *
+ * Holds the logic to persist the token acquired from Spotify authentication
+ * Redirects to the proper page
  */
 const RedirectPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { persistAccessTokenParams } = useSpotifyAuth();
 
   useEffect(() => {
     if (!location.hash) {

@@ -16,6 +16,17 @@ const ErrorBoundaryFallbackStyles = makeStyles(({ palette, typography }) => {
       marginBottom: 40,
       ...typography.h4
     },
+    stack: {
+      backgroundColor: palette.common.white,
+      color: palette.error.dark,
+      paddingTop: 20,
+      paddingBottom: 20,
+      marginTop: 20,
+      marginBottom: 20,
+      marginLeft: 20,
+      ...typography.body2,
+      textAlign: 'left'
+    },
     button: {
       ...typography.body1
     }
