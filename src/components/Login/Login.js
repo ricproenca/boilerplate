@@ -10,7 +10,7 @@ import { defaultProps, propTypes } from './Login.shape';
 import loginStyles from './Login.styles';
 
 /**
- * Login page
+ * Login Component
  */
 const Login = ({ handleLogin }) => {
   const classes = loginStyles();
