@@ -30,7 +30,9 @@ const RedirectPage = () => {
       token_type,
       expiry_time
     });
+  });
 
+  useEffect(() => {
     navigate(`${HOME_ROUTE}/dashboard`);
   });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { UserPlaylists as UserPlaylistsHOC } from 'react-spotify-api';
 
-import { defaultProps, propTypes } from './UserPlaylists.shape';
+import { defaultProps, propTypes } from './Playlists.shape';
 
 /**
  * User Component
@@ -19,7 +19,7 @@ const UserPlaylistsComponent = ({ data, loading, error }) => {
 
   return data ? (
     <div>
-      <h2>UserPlaylists</h2>
+      <h2>User Playlists</h2>
       <p>{data.display_name}</p>
       <ul>
         {data.items.map(item => (

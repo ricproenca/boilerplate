@@ -1,12 +1,12 @@
 import React from 'react';
-import { User as UserHOC } from 'react-spotify-api';
+import { User as UserProfileHOC } from 'react-spotify-api';
 
-import { defaultProps, propTypes } from './User.shape';
+import { defaultProps, propTypes } from './Profile.shape';
 
 /**
  * User Component
  */
-const UserComponent = ({ data, loading, error }) => {
+const UserProfileComponent = ({ data, loading, error }) => {
   if (loading) {
     return <h2>LOADING</h2>;
   }
@@ -35,9 +35,9 @@ const UserComponent = ({ data, loading, error }) => {
   ) : null;
 };
 
-UserComponent.defaultProps = { ...defaultProps };
-UserComponent.propTypes = { ...propTypes };
+UserProfileComponent.defaultProps = { ...defaultProps };
+UserProfileComponent.propTypes = { ...propTypes };
 
-const User = () => <UserHOC>{UserComponent}</UserHOC>;
+const User = () => <UserProfileHOC>{UserProfileComponent}</UserProfileHOC>;
 
 export default User;

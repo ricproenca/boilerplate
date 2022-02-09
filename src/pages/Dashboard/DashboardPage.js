@@ -1,8 +1,6 @@
 import React from 'react';
-import { Artist } from 'react-spotify-api';
 
-import User from '@Components/User';
-import UserPlaylists from '@Components/UserPlaylists';
+import UserTracks from '@Components/User/Tracks';
 
 /**
  * Dashboard page
@@ -11,8 +9,7 @@ import UserPlaylists from '@Components/UserPlaylists';
 const DashboardPage = () => {
   return (
     <>
-      <User />
-      <UserPlaylists />
+      <UserTracks />
     </>
   );
 };

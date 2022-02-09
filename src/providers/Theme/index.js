@@ -15,6 +15,6 @@ const theme = createTheme({
 });
 
 // eslint-disable-next-line no-console
-console.log('Theme', theme);
+// console.log('Theme', theme);
 
 export default theme;
